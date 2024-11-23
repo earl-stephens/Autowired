@@ -5,6 +5,7 @@
 package com.earl.config;
 
 import com.earl.beans.Parrot;
+import com.earl.beans.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,5 +21,12 @@ public class ProjectConfig {
         Parrot parrot = new Parrot();
         parrot.setName("Koko");
         return parrot;
+    }
+    
+    @Bean
+    Person person() {
+        Person person = new Person();
+        person.setName("Ella");
+        return person;
     }
 }
