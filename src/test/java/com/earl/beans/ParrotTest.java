@@ -5,10 +5,6 @@
 package com.earl.beans;
 
 import com.earl.config.ProjectConfig;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.Disabled;
@@ -29,10 +25,11 @@ public class ParrotTest {
     @Autowired
     private ApplicationContext context;
 
-    @Disabled
     @Test
-    public void testSomeMethod() {
+    public void testKoKoIsInTheContext() {
+        Parrot parrot = context.getBean(Parrot.class);
         
+        assertEquals("Koko", parrot.getName());
     }
     
 }
